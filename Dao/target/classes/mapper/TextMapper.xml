@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.qp.dao.TextDao">
+    <!-- xml中需要注意大于等于号等特殊符号,需要进行转义 -->
+    <select id="getall" resultType="textPojo">
+        select * from text where id = 1
+    </select>
+
+</mapper>
