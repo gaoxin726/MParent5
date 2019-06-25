@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>Insert title here</title>
+		<link rel="stylesheet" type="text/css" href="/static/easyui/themes/default/easyui.css"/>
+		<link rel="stylesheet" type="text/css" href="/static/easyui/themes/icon.css" />
+		<link rel="stylesheet" type="text/css" href="/static/easyui/themes/icon.css" />
+		<script type="text/javascript" src="/static/easyui/jquery.min.js"></script>
+		<script type="text/javascript" src="/static/easyui/jquery.easyui.min.js"></script>
+		<script type="text/javascript">
+			$(function() {
+				$(".tres").tree({
+					onClick: function(node) {
+						var t = $('#tt').tabs('getTab', node.text);
+						if(t) {
+							$('#tt').tabs('select', node.text);
+						} else {
+							$('#tt').tabs('add', {
+								title: node.text,
+								closable: true,
+								href: node.attr.url
+							});
+						}
+
+					}
+				});
+
+			});
+		</script>
+	</head>
+	<body class="easyui-layout">
+		<div data-options="region:'west',title:'West',split:true" style="width: 160px;">
+			<div id="aa" class="easyui-accordion" style="width: 320px; height: 500px;" data-options="fit:true">
+				<div title="产品管理" data-options="iconCls:'icon-save',selected:true" style="overflow: auto; padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品属性管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品审核管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品分类管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">销售产品管理</li>
+						
+					</ul>
+				</div>
+				<div title="楼盘管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">楼盘信息管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">楼盘审核管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">楼座管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">房号管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">新增户型</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">户型管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">销售订单管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">销售订单审核</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">商品配送管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">业主管理</li>
+					</ul>
+				</div>
+				<div title="合作商管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">入驻管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">城市权限</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">统计信息</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">个人资料</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">资料审核</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">地产商管理</li>
+					</ul>
+				</div>
+				<div title="作品管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">产品管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品属性管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品审核管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">产品分类管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">销售产品管理</li>
+					</ul>
+				</div>
+				<div title="分成管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">分成比例管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">合作商比例设置</li>
+					</ul>
+				</div>
+				<div title="意见管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">意见处理</li>
+					</ul>
+				</div>
+				<div title="服务管理管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">新增服务</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">服务管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">服务工程计划</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">售后服务</li>
+					</ul>
+				</div>
+				<div title="订单管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">订单折扣管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">订单折扣审核管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">进场费管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">订单付款管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">订单信息管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">订单换货审核那里</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">装修信息</li>
+					</ul>
+				</div>
+				<div title="任务单管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">任务单管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">厂家任务单</li>
+					</ul>
+				</div>
+				<div title="资金管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">资金预清分</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">资金清分</li>
+					</ul>
+				</div>
+				<div title="首页管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">合作品牌管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">新闻资讯管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">微网首页楼盘</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">广告管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">招聘管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">微网首页作品</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">招商加盟展示信息</li>
+					</ul>
+				</div>
+				<div title="系统管理" data-options="iconCls:'icon-reload'" style="padding: 10px;">
+					<ul class="tres easyui-tree">
+						<li data-options="attr:{'url':'admin/goods_gl.jsp'}">菜单管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">角色管理</li>
+						<li data-options="attr:{'url':'admin/users.jsp'}">用户管理</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div data-options="region:'center'" style="padding: 5px; background: #eee;">
+			<div id="tt" class="easyui-tabs" style="" data-options="fit:true">
+				<div title="欢迎页" style="padding: 20px; display: none;" data-options="closable:true">tab1</div>
+			</div>
+		</div>
+	</body>
+</html>

@@ -1,0 +1,22 @@
+package com.qp.controller;
+
+
+import com.qp.service.TextServcie;
+import com.qp.pojo.TextPojo;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.List;
+
+@RestController
+public class TextController {
+
+    @Autowired
+    private TextServcie textServcie;
+
+    @RequestMapping("/a")
+    public List<TextPojo> list() {
+        return textServcie.getall();
+    }
+}
