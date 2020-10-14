@@ -9,4 +9,8 @@ import java.util.List;
 @Repository
 public interface TextDao {
     public List<TextPojo> getall();
+
+
+
+
 }

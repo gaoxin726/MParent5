@@ -5,4 +5,8 @@ package com.qp.dao;
  * @date 2020/10/14 10:37
  */
 public class Test {
+
+    public static void main(String[] args) {
+
+    }
 }
